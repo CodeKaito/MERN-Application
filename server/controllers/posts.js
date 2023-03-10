@@ -1,4 +1,13 @@
+import PostMessage from "../models/postMessage.js";
 
 export const getPosts = (req, res) => {
-    res.send('THIS WORKS!');
+    try {
+        const postMessages = PostMessage.find();
+    } catch( error ) {
+
+    }
+}
+
+export const createPost = (req, res) => {
+    req.send('Post Creation');
 }
