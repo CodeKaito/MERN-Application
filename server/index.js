@@ -8,8 +8,6 @@ import postRoutes from './routes/posts.js';
 
 const app = express();
 
-app.use('/posts', postRoutes);
-
 dotenv.config();
 
 app.use(bodyParser.json());
@@ -21,6 +19,8 @@ const corsOptions ={
     optionSuccessStatus:200
 }
 app.use(cors(corsOptions));
+
+app.use('/posts', postRoutes);
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 9000;
