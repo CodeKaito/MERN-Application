@@ -1,12 +1,13 @@
 import './App.css';
+import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1> App </h1>
-      </header>
-    </div>
+    <Container maxidth='lg'>
+      <AppBar position='static' color='inherit'>
+        <Typography variant='h2' align='center'> Memo </Typography>
+      </AppBar>
+    </Container>
   );
 }
 
